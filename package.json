@@ -1,0 +1,28 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "CV website",
+  "main": "index.html",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss --o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disage/cv.git"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "Dmitry Krechetov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/disage/cv/issues"
+  },
+  "homepage": "https://github.com/disage/cv#readme"
+}
