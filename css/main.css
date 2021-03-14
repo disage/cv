@@ -40,6 +40,7 @@ body {
     align-items: center;
     flex-direction: column; }
     body #intro .logo {
+      z-index: 100;
       display: flex;
       justify-content: flex-end;
       width: 100%; }
@@ -53,6 +54,7 @@ body {
       body #intro .title .letter {
         display: inline-flex; }
     body #intro nav {
+      z-index: 100;
       display: flex;
       justify-content: start;
       color: #fff;
@@ -123,9 +125,82 @@ body {
     body #about .aboutTxt {
       padding-left: 150px;
       width: 420px;
-      text-align: justify; }
+      margin: 50px 0 0 0; }
       body #about .aboutTxt .letter {
         opacity: 0; }
+  body #skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body #skills .skillsWrapper {
+      width: 55%;
+      margin-top: 50px; }
+      body #skills .skillsWrapper .skillItem {
+        margin-bottom: 30px;
+        opacity: 0; }
+        body #skills .skillsWrapper .skillItem .skillHeader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-between; }
+          body #skills .skillsWrapper .skillItem .skillHeader .skillName {
+            display: flex;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 24px; }
+          body #skills .skillsWrapper .skillItem .skillHeader .readMoreBtn {
+            display: flex;
+            color: #6f6f6f;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px; }
+        body #skills .skillsWrapper .skillItem .skillBar {
+          display: flex;
+          margin-top: 10px;
+          background: #52006f;
+          height: 50px; }
+          body #skills .skillsWrapper .skillItem .skillBar .skillIndicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: flex-end;
+            width: 30px;
+            transition: 2s;
+            background: #fc000b;
+            padding: 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            color: #fff; }
+  body #works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body #works #worksTitle {
+      margin-bottom: 50px; }
+    body #works .worksWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      justify-content: space-between; }
+      body #works .worksWrapper .workItem {
+        height: 220px;
+        width: 30%;
+        background: #fc000b;
+        padding-top: 10px; }
+        body #works .worksWrapper .workItem:nth-child(1) {
+          margin-bottom: 50px; }
+        body #works .worksWrapper .workItem .workImage {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #52006f;
+          height: 100%;
+          font-family: "Montserrat", sans-serif;
+          font-size: 32px;
+          color: #ffffff; }
+      body #works .worksWrapper .doubleWorkItem {
+        width: 60%; }
 
 @keyframes webDev {
   0% {

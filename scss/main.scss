@@ -49,6 +49,7 @@ body {
         @include flex-center;
         flex-direction: column;
         .logo {
+            z-index: 100;
             display: flex;
             justify-content: flex-end;
             width: 100%;
@@ -66,6 +67,7 @@ body {
             }
         }
         nav {
+            z-index: 100;
             display: flex;
             justify-content: start;
             color: #fff;
@@ -143,9 +145,88 @@ body {
         .aboutTxt {
             padding-left: 150px;
             width: 420px;
-            text-align: justify;
+            margin: 50px 0 0 0;
             .letter {
                 opacity: 0;
+            }
+        }
+    }
+    #skills {
+        @include flex-center;
+        flex-direction: column;
+        .skillsWrapper {
+            width: 55%;
+            margin-top: 50px;
+            .skillItem {
+                margin-bottom: 30px;
+                opacity: 0;
+                .skillHeader {
+                    @include flex-center;
+                    justify-content: space-between;
+                    .skillName {
+                        display: flex;
+                        color: #fff;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 24px;
+                    }
+                    .readMoreBtn {
+                        display: flex;
+                        color: #6f6f6f;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 16px;
+                    }
+                }
+                .skillBar {
+                    display: flex;
+                    margin-top: 10px;
+                    background: $realPurple;
+                    height: 50px;
+
+                    .skillIndicator {
+                        @include flex-center();
+                        justify-content: flex-end;
+                        width: 30px;
+                        transition: 2s;
+                        background: $coolRed;
+                        padding: 15px;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 18px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    #works {
+        @include flex-center;
+        flex-direction: column;
+        #worksTitle {
+            margin-bottom: 50px;
+        }
+        .worksWrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+            justify-content: space-between;
+            .workItem {
+                height: 220px;
+                width: 30%;
+                background: $coolRed;
+                padding-top: 10px;
+                &:nth-child(1) {
+                    margin-bottom: 50px;
+                }
+                .workImage {
+                    @include flex-center();
+                    background-color: $realPurple;
+                    height: 100%;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 32px;
+                    color: #ffffff;
+                }
+            }
+            .doubleWorkItem {
+                width: 60%;
             }
         }
     }
