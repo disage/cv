@@ -26,6 +26,12 @@ p {
     font-size: 16px;
     color: #ffffff;
 }
+li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffffff;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -150,12 +156,18 @@ body {
                 opacity: 0;
             }
         }
+        ul {
+            li {
+                padding-left: 150px;
+                width: 420px;
+            }
+        }
     }
     #skills {
         @include flex-center;
         flex-direction: column;
         .skillsWrapper {
-            width: 55%;
+            width: 70%;
             margin-top: 50px;
             .skillItem {
                 margin-bottom: 30px;
@@ -209,6 +221,7 @@ body {
             width: 70%;
             justify-content: space-between;
             .workItem {
+                opacity: 0;
                 height: 220px;
                 width: 30%;
                 background: $coolRed;
@@ -227,6 +240,60 @@ body {
             }
             .doubleWorkItem {
                 width: 60%;
+            }
+        }
+    }
+    #contacts {
+        @include flex-center;
+        flex-direction: column;
+        #contactsTitle {
+            margin-bottom: 50px;
+        }
+        .contactsInfo {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .socialMedia {
+                @include flex-center();
+                padding: 0px 0px 0px 150px;
+                width: 50%;
+                flex-direction: row;
+                justify-content: space-between;
+                span {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 24px;
+                    color: #ffffff;
+                    margin-right: 100px;
+                }
+                .socialMediaIcons {
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 200px;
+                        svg {
+                            display: flex;
+                        }
+                        .horLine {
+                            display: flex;
+                            height: 1px;
+                            width: 60px;
+                            margin: 0px 20px;
+                            background: $coolRed;
+                        }
+                        .verLine {
+                            display: flex;
+                            width: 1px;
+                            height: 60px;
+                            background: $coolRed;
+                            margin: 25px;
+                        }
+                    }
+                }
+            }
+            .otherInfo {
+                padding-right: 150px;
+                width: 50%;
             }
         }
     }

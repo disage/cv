@@ -16,6 +16,12 @@ p {
   font-size: 16px;
   color: #ffffff; }
 
+li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff; }
+
 ul {
   list-style: none;
   padding: 0;
@@ -128,13 +134,16 @@ body {
       margin: 50px 0 0 0; }
       body #about .aboutTxt .letter {
         opacity: 0; }
+    body #about ul li {
+      padding-left: 150px;
+      width: 420px; }
   body #skills {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; }
     body #skills .skillsWrapper {
-      width: 55%;
+      width: 70%;
       margin-top: 50px; }
       body #skills .skillsWrapper .skillItem {
         margin-bottom: 30px;
@@ -184,6 +193,7 @@ body {
       width: 70%;
       justify-content: space-between; }
       body #works .worksWrapper .workItem {
+        opacity: 0;
         height: 220px;
         width: 30%;
         background: #fc000b;
@@ -201,6 +211,52 @@ body {
           color: #ffffff; }
       body #works .worksWrapper .doubleWorkItem {
         width: 60%; }
+  body #contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body #contacts #contactsTitle {
+      margin-bottom: 50px; }
+    body #contacts .contactsInfo {
+      display: flex;
+      flex-direction: row;
+      width: 100%; }
+      body #contacts .contactsInfo .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px 0px 150px;
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-between; }
+        body #contacts .contactsInfo .socialMedia span {
+          font-family: "Montserrat", sans-serif;
+          font-size: 24px;
+          color: #ffffff;
+          margin-right: 100px; }
+        body #contacts .contactsInfo .socialMedia .socialMediaIcons .row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 200px; }
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row svg {
+            display: flex; }
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .horLine {
+            display: flex;
+            height: 1px;
+            width: 60px;
+            margin: 0px 20px;
+            background: #fc000b; }
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .verLine {
+            display: flex;
+            width: 1px;
+            height: 60px;
+            background: #fc000b;
+            margin: 25px; }
+      body #contacts .contactsInfo .otherInfo {
+        padding-right: 150px;
+        width: 50%; }
 
 @keyframes webDev {
   0% {

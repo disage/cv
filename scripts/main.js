@@ -11,12 +11,15 @@ let skillItems = document.getElementsByClassName('skillItem');
 let aboutActive = true;
 let skillsActive = true;
 let worksActive = true;
+let contactsActive = true;
 let aboutSectionId = document.getElementById('aboutTitle');
 let skillsSectionId = document.getElementById('skillsTitle');
 let worksSectionId = document.getElementById('worksTitle');
+let contactsSectionId = document.getElementById('contactsTitle');
 let aboutSectionHeight = offset(aboutSectionId).top;
 let skillsSectionHeight = offset(skillsSectionId).top;
 let worksSectionHeight = offset(worksSectionId).top;
+let contactsSectionHeight = offset(contactsSectionId).top;
 
 let animOnScroll = () => {
   if (
@@ -62,7 +65,7 @@ let animOnScroll = () => {
     skillsActive == true
   ) {
     // h2
-    anime.timeline({ loop: false }).add({
+    anime.timeline().add({
       targets: '#skillsTitle',
       translateX: [40, 0],
       translateZ: 0,
@@ -71,9 +74,10 @@ let animOnScroll = () => {
       duration: 3000,
       delay: (el, i) => 300 + 30 * i,
     });
-    anime.timeline({ loop: false }).add({
+    //skillItem
+    anime.timeline().add({
       targets: '.skillItem',
-      translateX: [80, 0],
+      translateX: [-80, 0],
       translateZ: 0,
       opacity: [0, 1],
       easing: 'easeOutExpo',
@@ -83,7 +87,6 @@ let animOnScroll = () => {
 
     let skillItemAnim = () => {
       for (let i = 0; i < skillItems.length; i++) {
-        console.log(skillItems[i].childNodes[3].childNodes[1]);
         skillItems[i].childNodes[3].childNodes[1].style.width =
           skillItems[i].childNodes[3].textContent;
       }
@@ -93,12 +96,12 @@ let animOnScroll = () => {
     }, 1000);
     skillsActive = false;
   } else if (
-    pageYOffset > worksSectionHeight / 1.5 &&
+    pageYOffset > worksSectionHeight / 1.2 &&
     pageYOffset < worksSectionHeight * 2 &&
     worksActive == true
   ) {
     // h2
-    anime.timeline({ loop: false }).add({
+    anime.timeline().add({
       targets: '#worksTitle',
       translateX: [40, 0],
       translateZ: 0,
@@ -107,7 +110,33 @@ let animOnScroll = () => {
       duration: 3000,
       delay: (el, i) => 300 + 30 * i,
     });
+    //workItem
+    anime.timeline().add({
+      targets: '.workItem ',
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 2000,
+      delay: (el, i) => 700 + 100 * i,
+    });
     worksActive = false;
+  } else if (
+    pageYOffset > contactsSectionHeight / 1.2 &&
+    pageYOffset < contactsSectionHeight * 2 &&
+    contactsActive == true
+  ) {
+    // h2
+    anime.timeline().add({
+      targets: '#contactsTitle',
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 3000,
+      delay: (el, i) => 300 + 30 * i,
+    });
+    contactsActive = false;
   }
 };
 window.addEventListener('scroll', animOnScroll);
