@@ -4,10 +4,8 @@
   "description": "CV website",
   "main": "index.html",
   "dependencies": {
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "gulp-sass": "^4.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch scss --o css"
@@ -24,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/disage/cv/issues"
   },
-  "homepage": "https://github.com/disage/cv#readme"
+  "homepage": "https://github.com/disage/cv#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
 }

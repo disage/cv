@@ -1,10 +1,41 @@
-var textWrapper = document.querySelector('.aboutTxt');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// About text animation
+
+function wrapTextWithLetters(element) {
+  element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+}
+var elements = document.querySelectorAll('.aboutTxt');
+for (var i = 0; i < elements.length; i++) {
+  wrapTextWithLetters(elements[i]);
+}
+
 let offset = (el) => {
   const rect = el.getBoundingClientRect(),
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return { top: rect.top + scrollTop };
 };
+
+// Navbar
+
+const setActiveNavItem = (value) => {
+  var links = document.getElementsByClassName("navItem");
+  for (var i = 0; i < links.length; i++) {
+    links[i]?.classList?.remove("activeNavItem");
+  }
+
+  var newHash = window.location.hash.substring(1);
+  var activeNavLink = document.getElementById(`${newHash}Link`)
+  if (value) {
+    activeNavLink = document.getElementById(`${value}Link`)
+  }
+  activeNavLink?.classList?.add("activeNavItem");
+}
+
+window.onhashchange = function() {
+  setActiveNavItem()
+};
+
+setActiveNavItem()
+
 // global vars
 let skillItems = document.getElementsByClassName('skillItem');
 
@@ -21,6 +52,31 @@ let skillsSectionHeight = offset(skillsSectionId).top;
 let worksSectionHeight = offset(worksSectionId).top;
 let contactsSectionHeight = offset(contactsSectionId).top;
 
+let changeNavItemOnScroll = () => {
+  const aboutBreakPoint = aboutSectionId.getBoundingClientRect().bottom;
+  const skillsBreakPoint = skillsSectionId.getBoundingClientRect().bottom;
+  const worksBreakPoint = worksSectionId.getBoundingClientRect().bottom;
+  const contactsBreakPoint = contactsSectionId.getBoundingClientRect().bottom;
+  if (aboutBreakPoint > 400 ) {
+    setActiveNavItem('intro')
+  } else if (
+    aboutBreakPoint < 400 && aboutBreakPoint > -400 
+  ) {
+    setActiveNavItem('about')
+  } else if (
+    skillsBreakPoint < 300 && skillsBreakPoint > -400
+  ) {
+    setActiveNavItem('skills')
+  } else if (
+    worksBreakPoint < 400 && worksBreakPoint > -400
+  ) {
+    setActiveNavItem('works')
+  } else if (
+    contactsBreakPoint < 500 && contactsBreakPoint > -400
+  ) {
+    setActiveNavItem('contacts')
+  }
+}
 let animOnScroll = () => {
   if (
     pageYOffset > aboutSectionHeight / 2 &&
@@ -37,6 +93,7 @@ let animOnScroll = () => {
       duration: 3000,
       delay: (el, i) => 300 + 30 * i,
     });
+    
     // redLine
 
     anime.timeline({ loop: false }).add({
@@ -55,8 +112,8 @@ let animOnScroll = () => {
       targets: '.aboutTxt .letter',
       opacity: [0, 1],
       easing: 'easeInOutQuad',
-      duration: 400,
-      delay: (el, i) => 3 * (i + 1),
+      duration: 1000,
+      delay: (el, i) => 16 * (i + 3),
     });
     aboutActive = false;
   } else if (
@@ -139,8 +196,11 @@ let animOnScroll = () => {
     contactsActive = false;
   }
 };
+window.addEventListener('scroll', changeNavItemOnScroll);
 window.addEventListener('scroll', animOnScroll);
 animOnScroll();
+window.scrollBy(0, 1);
+window.scrollBy(0, -1);
 // Title
 var textWrapper = document.querySelector('.title');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

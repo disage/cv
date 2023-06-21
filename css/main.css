@@ -27,6 +27,10 @@ ul {
   padding: 0;
   margin: 0; }
 
+a {
+  color: #ffffff;
+  text-decoration: none; }
+
 body {
   background: #120423;
   margin: 0;
@@ -50,7 +54,7 @@ body {
       display: flex;
       justify-content: flex-end;
       width: 100%; }
-      body #intro .logo svg {
+      body #intro .logo .logoIcon {
         top: 50px;
         position: fixed;
         display: flex;
@@ -98,7 +102,8 @@ body {
             body #intro nav .navWrapper .navigation #navList .activeNavItem {
               background: #52006f;
               font-weight: 700;
-              text-decoration-line: none; }
+              text-decoration-line: none;
+              text-decoration: none !important; }
           body #intro nav .navWrapper .navigation .navigationSpan {
             display: flex;
             margin-right: 40px; }
