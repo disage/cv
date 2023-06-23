@@ -81,7 +81,7 @@ let animOnScroll = () => {
   if (
     pageYOffset > aboutSectionHeight / 2 &&
     pageYOffset < aboutSectionHeight * 2 &&
-    aboutActive == true
+    aboutActive
   ) {
     // h2
     anime.timeline({ loop: false }).add({
@@ -113,13 +113,13 @@ let animOnScroll = () => {
       opacity: [0, 1],
       easing: 'easeInOutQuad',
       duration: 1000,
-      delay: (el, i) => 16 * (i + 3),
+      delay: (el, i) => 10 * (i + 3),
     });
     aboutActive = false;
   } else if (
     pageYOffset > skillsSectionHeight / 1.5 &&
     pageYOffset < skillsSectionHeight * 2 &&
-    skillsActive == true
+    skillsActive
   ) {
     // h2
     anime.timeline().add({
@@ -154,8 +154,8 @@ let animOnScroll = () => {
     skillsActive = false;
   } else if (
     pageYOffset > worksSectionHeight / 1.2 &&
-    pageYOffset < worksSectionHeight * 2 &&
-    worksActive == true
+    pageYOffset < worksSectionHeight &&
+    worksActive
   ) {
     // h2
     anime.timeline().add({
@@ -179,9 +179,7 @@ let animOnScroll = () => {
     });
     worksActive = false;
   } else if (
-    pageYOffset > contactsSectionHeight / 1.2 &&
-    pageYOffset < contactsSectionHeight * 2 &&
-    contactsActive == true
+    pageYOffset > contactsSectionHeight / 1.2 && contactsActive
   ) {
     // h2
     anime.timeline().add({
@@ -193,14 +191,51 @@ let animOnScroll = () => {
       duration: 3000,
       delay: (el, i) => 300 + 30 * i,
     });
+    anime.timeline({ loop: false }).add({
+      targets: '.socialMediaIcon',
+      opacity: [0, 1],
+      easing: 'easeInOutQuad',
+      duration: 2000,
+      delay: (el, i) => 300 + 300 * i,
+    });
+    anime.timeline({ loop: false }).add({
+      targets: '.horLine',
+      opacity: [0, 1],
+      width: [0, 60],
+      easing: 'easeInOutQuad',
+      duration: 1000,
+      delay: (el, i) => 150 + 350 * i,
+    });
+    anime.timeline({ loop: false }).add({
+      targets: '.verLine',
+      opacity: [0, 1],
+      height: [0, 60],
+      easing: 'easeInOutQuad',
+      duration: 1000,
+      delay: (el, i) => 150 + 250 * i,
+    });
+    anime.timeline({ loop: false }).add({
+      targets: '.socialMedia span, .location span',
+      translateY: [-40, 0],
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 3000,
+      delay: (el, i) => 1400,
+    });
+    anime.timeline({ loop: false }).add({
+      targets: '.socialMediaIcons p',
+      opacity: [0, 1],
+      easing: 'easeInOutQuad',
+      duration: 3000
+    });
     contactsActive = false;
   }
 };
 window.addEventListener('scroll', changeNavItemOnScroll);
 window.addEventListener('scroll', animOnScroll);
 animOnScroll();
-window.scrollBy(0, 1);
-window.scrollBy(0, -1);
+changeNavItemOnScroll();
+window.scrollBy(0, -10);
 // Title
 var textWrapper = document.querySelector('.title');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

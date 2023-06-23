@@ -116,11 +116,12 @@ body {
     flex-direction: column;
     align-items: flex-start; }
     body #about .aboutHeader {
-      padding-left: 150px;
+      align-items: center;
       display: flex;
       flex-direction: row;
-      width: 420px;
-      align-items: center; }
+      margin-bottom: 50px;
+      padding-left: 150px;
+      width: 420px; }
       body #about .aboutHeader .redLines {
         display: flex;
         flex-direction: column;
@@ -136,9 +137,12 @@ body {
     body #about .aboutTxt {
       padding-left: 150px;
       width: 420px;
-      margin: 50px 0 0 0; }
+      margin: 0; }
       body #about .aboutTxt .letter {
         opacity: 0; }
+    body #about .aboutTxtHeadline {
+      margin: 50px 0 10px 0;
+      font-weight: bold; }
     body #about ul li {
       padding-left: 150px;
       width: 420px; }
@@ -224,42 +228,59 @@ body {
     body #contacts #contactsTitle {
       margin-bottom: 50px; }
     body #contacts .contactsInfo {
+      align-items: center;
       display: flex;
       flex-direction: row;
       width: 100%; }
-      body #contacts .contactsInfo .socialMedia {
+      body #contacts .contactsInfo .socialMedia, body #contacts .contactsInfo .location {
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
         padding: 0px 0px 0px 150px;
         width: 50%;
         flex-direction: row;
         justify-content: space-between; }
-        body #contacts .contactsInfo .socialMedia span {
+        body #contacts .contactsInfo .socialMedia span, body #contacts .contactsInfo .location span {
+          opacity: 0;
           font-family: "Montserrat", sans-serif;
           font-size: 24px;
           color: #ffffff;
-          margin-right: 100px; }
-        body #contacts .contactsInfo .socialMedia .socialMediaIcons .row {
+          margin-right: 100px;
+          font-weight: 200; }
+        body #contacts .contactsInfo .socialMedia .socialMediaIcons .socialMediaIcon, body #contacts .contactsInfo .location .socialMediaIcons .socialMediaIcon {
+          opacity: 0; }
+        body #contacts .contactsInfo .socialMedia .socialMediaIcons .row, body #contacts .contactsInfo .location .socialMediaIcons .row {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 200px; }
-          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row svg {
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row p, body #contacts .contactsInfo .location .socialMediaIcons .row p {
+            font-size: 24px; }
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row svg, body #contacts .contactsInfo .location .socialMediaIcons .row svg {
             display: flex; }
-          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .horLine {
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .horLine, body #contacts .contactsInfo .location .socialMediaIcons .row .horLine {
             display: flex;
             height: 1px;
-            width: 60px;
+            width: 0px;
             margin: 0px 20px;
             background: #fc000b; }
-          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .verLine {
+          body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .verLine, body #contacts .contactsInfo .location .socialMediaIcons .row .verLine {
             display: flex;
             width: 1px;
-            height: 60px;
+            height: 0px;
             background: #fc000b;
             margin: 25px; }
+      body #contacts .contactsInfo .location {
+        padding-left: 100px; }
+        body #contacts .contactsInfo .location .socialMediaIcons .row {
+          width: auto; }
+          body #contacts .contactsInfo .location .socialMediaIcons .row p {
+            opacity: 0; }
+      body #contacts .contactsInfo .location span {
+        margin-right: 50px; }
       body #contacts .contactsInfo .otherInfo {
+        box-sizing: border-box;
         padding-right: 150px;
         width: 50%; }
 
