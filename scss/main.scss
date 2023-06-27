@@ -235,19 +235,57 @@ body {
                 opacity: 0;
                 height: 220px;
                 width: 30%;
-                background: $coolRed;
                 padding-top: 10px;
                 &:nth-child(1) {
                     margin-bottom: 50px;
+                }
+                &:hover {
+                    .workImage {
+                        background: rgba(0, 0, 0, 0.0);
+                        transition: 0.6s ;
+                        p {
+                            transform: translateY(75px);
+                            transition: 0.7s;
+                            font-size: 18px;
+                            background: $realPurple;
+                            padding: 10px 20px;
+                        }
+                    }
                 }
                 .workImage {
                     @include flex-center();
                     background-color: $realPurple;
                     height: 100%;
-                    font-family: "Montserrat", sans-serif;
-                    font-size: 32px;
-                    color: #ffffff;
+                    transition: 0.6s;
+                    p {
+                        transition: 0.7s;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 32px;
+                        color: #ffffff;
+                        text-align: center;
+                    }
                 }
+            }
+            #cookingCompanion:hover {
+                background-image: url('../images/projectCC.png')!important;
+                background-size: cover;
+                background-position-x: center;
+            }
+            #reactPizza:hover {
+                background-image: url('../images/projectReactPizza.png')!important;
+                background-size: cover;
+                background-position-x: center;
+            }
+            #m1m:hover {
+                background-image: url('../images/projectM1M.png')!important;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-y: -15px;
+            }
+            #krok:hover {
+                background-image: url('../images/projectCC.png')!important;
+                background-size: cover;
+                background-position-x: center;
             }
             .doubleWorkItem {
                 width: 60%;

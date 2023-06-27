@@ -205,19 +205,48 @@ body {
         opacity: 0;
         height: 220px;
         width: 30%;
-        background: #fc000b;
         padding-top: 10px; }
         body #works .worksWrapper .workItem:nth-child(1) {
           margin-bottom: 50px; }
+        body #works .worksWrapper .workItem:hover .workImage {
+          background: rgba(0, 0, 0, 0);
+          transition: 0.6s; }
+          body #works .worksWrapper .workItem:hover .workImage p {
+            transform: translateY(75px);
+            transition: 0.7s;
+            font-size: 18px;
+            background: #52006f;
+            padding: 10px 20px; }
         body #works .worksWrapper .workItem .workImage {
           display: flex;
           justify-content: center;
           align-items: center;
           background-color: #52006f;
           height: 100%;
-          font-family: "Montserrat", sans-serif;
-          font-size: 32px;
-          color: #ffffff; }
+          transition: 0.6s; }
+          body #works .worksWrapper .workItem .workImage p {
+            transition: 0.7s;
+            font-family: "Montserrat", sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            text-align: center; }
+      body #works .worksWrapper #cookingCompanion:hover {
+        background-image: url("../images/projectCC.png") !important;
+        background-size: cover;
+        background-position-x: center; }
+      body #works .worksWrapper #reactPizza:hover {
+        background-image: url("../images/projectReactPizza.png") !important;
+        background-size: cover;
+        background-position-x: center; }
+      body #works .worksWrapper #m1m:hover {
+        background-image: url("../images/projectM1M.png") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -15px; }
+      body #works .worksWrapper #krok:hover {
+        background-image: url("../images/projectCC.png") !important;
+        background-size: cover;
+        background-position-x: center; }
       body #works .worksWrapper .doubleWorkItem {
         width: 60%; }
   body #contacts {
