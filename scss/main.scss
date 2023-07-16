@@ -59,23 +59,18 @@ body {
     #intro {
         @include flex-center;
         flex-direction: column;
-        .logo {
-            z-index: 100;
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            .logoIcon {
-                top: 50px;
-                position: fixed;
-                display: flex;
-                padding-right: 100px;
+        #logoStartElement {
+            transform-origin: center;
+            opacity: 0;
+            & path {
+                transform-origin: center;
             }
         }
-        .title {
-            text-transform: uppercase;
-            .letter {
-                display: inline-flex;
-            }
+        #logoEndElement, #logoEndElement2 {
+            opacity: 0;
+        }
+        #logoTxt, #logoTxt2, #logoTxt3 {
+            opacity: 0;
         }
         nav {
             z-index: 100;
@@ -280,7 +275,6 @@ body {
                 background-image: url('../images/projectM1M.png')!important;
                 background-size: cover;
                 background-repeat: no-repeat;
-                background-position-y: -15px;
             }
             #krok:hover {
                 background-image: url('../images/projectCC.png')!important;

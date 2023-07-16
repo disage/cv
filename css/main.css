@@ -49,20 +49,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    body #intro .logo {
-      z-index: 100;
-      display: flex;
-      justify-content: flex-end;
-      width: 100%; }
-      body #intro .logo .logoIcon {
-        top: 50px;
-        position: fixed;
-        display: flex;
-        padding-right: 100px; }
-    body #intro .title {
-      text-transform: uppercase; }
-      body #intro .title .letter {
-        display: inline-flex; }
+    body #intro #logoStartElement {
+      transform-origin: center;
+      opacity: 0; }
+      body #intro #logoStartElement path {
+        transform-origin: center; }
+    body #intro #logoEndElement, body #intro #logoEndElement2 {
+      opacity: 0; }
+    body #intro #logoTxt, body #intro #logoTxt2, body #intro #logoTxt3 {
+      opacity: 0; }
     body #intro nav {
       z-index: 100;
       display: flex;
@@ -241,8 +236,7 @@ body {
       body #works .worksWrapper #m1m:hover {
         background-image: url("../images/projectM1M.png") !important;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position-y: -15px; }
+        background-repeat: no-repeat; }
       body #works .worksWrapper #krok:hover {
         background-image: url("../images/projectCC.png") !important;
         background-size: cover;

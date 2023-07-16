@@ -35,10 +35,115 @@ window.onhashchange = function() {
 };
 
 setActiveNavItem()
+var logoStartElement = document.getElementById('logoStartElement')
+
+// Hello Screen Animation
+
+const animateHelloScreen = () => {
+  let animation1 = anime({
+    targets: '#logoTxt, #logoEndElement',
+    easing: 'easeInOutQuad',
+    delay: 5500,
+    opacity: {
+      value: [0, 1],
+    },
+    translateX: {
+      value:  [-100, 0],
+      duration: 500
+    },
+  });
+
+  let animation2 = anime({
+    targets: '#logoTxt3, #logoEndElement2',
+    delay: 5500,
+    easing: 'easeInOutQuad',
+    opacity: {
+      value: [0, 1],
+    },
+    translateX: {
+      value:  [100, 0],
+      duration: 500
+    },
+  });
+
+  anime.timeline({ loop: false }).add({
+    targets: '#logoStartElement',
+    scale: {
+      value: [0, 1],
+      duration: 400
+    },
+    translateX: {
+      value: [0, -210],
+      delay: 600,
+      duration: 400
+    },
+    opacity: [0, 1],
+    easing: 'easeOutCubic',
+    duration: 800,
+  }).add({
+    targets: '#logoTxt, #logoEndElement',
+    easing: 'easeInOutQuad',
+    opacity: {
+      value: [0, 1],
+    },
+    translateX: {
+      value:  [-300, -210],
+      duration: 500
+    },
+  }).add({
+    targets: '#logoTxt, #logoEndElement',
+    easing: 'easeInOutQuad',
+    opacity: {
+      value: [1, 0],
+      duration: 700
+    },
+    translateX: {
+      value:  [-210, -300],
+      duration: 600,
+      delay: 400
+    },
+  }).add({
+    targets: '#logoTxt2, #logoEndElement',
+    easing: 'easeInOutQuad',
+    opacity: {
+      value: [0, 1],
+    },
+    translateX: {
+      value:  [-300, -210],
+      duration: 500
+    }
+  }).add({
+    targets: '#logoTxt2, #logoEndElement',
+    easing: 'easeInOutQuad',
+    opacity: {
+      value: [1, 0],
+      duration: 700
+    },
+    translateX: {
+      value:  [-210, -300],
+      duration: 600,
+      delay: 400
+    },
+  }).add({
+    targets: '#logoStartElement',
+    easing: 'easeOutCubic',
+    duration: 600,
+    delay: 200
+  }).add({
+    targets: '#logoStartElement',
+    translateX: [-210, 0],
+    easing: 'easeOutCubic',
+    duration: 400
+  }).add({
+    targets: [animation1, animation2],
+  })
+}
+
 
 // global vars
 let skillItems = document.getElementsByClassName('skillItem');
 
+let helloScreenActive = true;
 let aboutActive = true;
 let skillsActive = true;
 let worksActive = true;
@@ -79,6 +184,12 @@ let changeNavItemOnScroll = () => {
 }
 let animOnScroll = () => {
   if (
+    pageYOffset < 300 && helloScreenActive
+  ) {
+    animateHelloScreen()
+    helloScreenActive = false
+  }
+  else if (
     pageYOffset > aboutSectionHeight / 2 &&
     pageYOffset < aboutSectionHeight * 2 &&
     aboutActive
@@ -236,16 +347,6 @@ window.addEventListener('scroll', animOnScroll);
 animOnScroll();
 changeNavItemOnScroll();
 window.scrollBy(0, -10);
-// Title
-var textWrapper = document.querySelector('.title');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({ loop: false }).add({
-  targets: '.title .letter',
-  translateX: [40, 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  easing: 'easeOutExpo',
-  duration: 3000,
-  delay: (el, i) => 500 + 30 * i,
-});
+
+
