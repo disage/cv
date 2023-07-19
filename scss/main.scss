@@ -127,13 +127,13 @@ body {
     #about {
         @include flex-center;
         flex-direction: column;
+        padding-left:   50px;
         align-items: flex-start;
         .aboutHeader {
             align-items: center;
             display: flex;
             flex-direction: row;
             margin-bottom: 50px;
-            padding-left: 150px;
             width: 420px;
             .redLines {
                 display: flex;
@@ -151,7 +151,6 @@ body {
             }
         }
         .aboutTxt {
-            padding-left: 150px;
             width: 420px;
             margin: 0;
             .letter {
@@ -164,7 +163,6 @@ body {
         }
         ul {
             li {
-                padding-left: 150px;
                 width: 420px;
             }
         }
@@ -300,25 +298,24 @@ body {
             .socialMedia, .location {
                 @include flex-center();
                 box-sizing: border-box;
-                padding: 0px 0px 0px 150px;
-                width: 50%;
                 flex-direction: row;
-                justify-content: space-between;
+                width: 50%;
                 span {
-                    opacity: 0;
+                    color: #ffffff;
                     font-family: "Montserrat", sans-serif;
                     font-size: 24px;
-                    color: #ffffff;
-                    margin-right: 100px;
                     font-weight: 200;
+                    margin-left: 30px;
+                    margin-right: 7%;
+                    opacity: 0;
                 }
                 .socialMediaIcons {
                     .socialMediaIcon {
                         opacity: 0;
                     }
                     .row {
-                        display: flex;
                         align-items: center;
+                        display: flex;
                         justify-content: space-between;
                         width: 200px;
                         p {
@@ -328,24 +325,27 @@ body {
                             display: flex;
                         }
                         .horLine {
+                            background: $coolRed;
                             display: flex;
                             height: 1px;
-                            width: 0px;
                             margin: 0px 20px;
-                            background: $coolRed;
+                            width: 0px;
                         }
                         .verLine {
-                            display: flex;
-                            width: 1px;
-                            height: 0px;
                             background: $coolRed;
+                            display: flex;
+                            height: 0px;
                             margin: 25px;
+                            width: 1px;
                         }
                     }
                 }
             }
+            .socialMedia {
+                justify-content: end
+            }
             .location {
-                padding-left: 100px;
+                box-sizing: content-box;
                 .socialMediaIcons {
                     .row {
                         width: auto;
@@ -356,11 +356,10 @@ body {
                 }
             }
             .location span {
+                margin-left: 60%;
                 margin-right: 50px;
             }
             .otherInfo {
-                box-sizing: border-box;
-                padding-right: 150px;
                 width: 50%;
             }
         }
@@ -377,5 +376,45 @@ body {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1200px)  {
+    span {
+        font-size: 14px;
+    }
+    #introSVG {
+        width: 70%;
+    }
+    .navWrapper {
+        padding-left: 20px!important;
+        bottom: 20px!important;
+    }
+    .skillsWrapper {
+        width: 90%!important;
+    }
+    .worksWrapper {
+        width: 90%!important;
+    }
+    .contactsInfo {
+        align-items: baseline!important;
+    }
+    .location {
+        flex-direction: column!important;
+        margin-left: 150px;
+        span {
+            margin: 0!important;
+        }
+    }
+    .socialMedia {
+        flex-direction: column-reverse!important;
+        span {
+            margin-bottom: 30px;
+        }
+    }
+}
+@media screen and (min-width: 1200px)  {
+    #about {
+        padding-left: 150px!important;
     }
 }

@@ -109,13 +109,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 50px;
     align-items: flex-start; }
     body #about .aboutHeader {
       align-items: center;
       display: flex;
       flex-direction: row;
       margin-bottom: 50px;
-      padding-left: 150px;
       width: 420px; }
       body #about .aboutHeader .redLines {
         display: flex;
@@ -130,7 +130,6 @@ body {
           height: 4px;
           opacity: 0; }
     body #about .aboutTxt {
-      padding-left: 150px;
       width: 420px;
       margin: 0; }
       body #about .aboutTxt .letter {
@@ -139,7 +138,6 @@ body {
       margin: 50px 0 10px 0;
       font-weight: bold; }
     body #about ul li {
-      padding-left: 150px;
       width: 420px; }
   body #skills {
     display: flex;
@@ -260,22 +258,21 @@ body {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding: 0px 0px 0px 150px;
-        width: 50%;
         flex-direction: row;
-        justify-content: space-between; }
+        width: 50%; }
         body #contacts .contactsInfo .socialMedia span, body #contacts .contactsInfo .location span {
-          opacity: 0;
+          color: #ffffff;
           font-family: "Montserrat", sans-serif;
           font-size: 24px;
-          color: #ffffff;
-          margin-right: 100px;
-          font-weight: 200; }
+          font-weight: 200;
+          margin-left: 30px;
+          margin-right: 7%;
+          opacity: 0; }
         body #contacts .contactsInfo .socialMedia .socialMediaIcons .socialMediaIcon, body #contacts .contactsInfo .location .socialMediaIcons .socialMediaIcon {
           opacity: 0; }
         body #contacts .contactsInfo .socialMedia .socialMediaIcons .row, body #contacts .contactsInfo .location .socialMediaIcons .row {
-          display: flex;
           align-items: center;
+          display: flex;
           justify-content: space-between;
           width: 200px; }
           body #contacts .contactsInfo .socialMedia .socialMediaIcons .row p, body #contacts .contactsInfo .location .socialMediaIcons .row p {
@@ -283,28 +280,29 @@ body {
           body #contacts .contactsInfo .socialMedia .socialMediaIcons .row svg, body #contacts .contactsInfo .location .socialMediaIcons .row svg {
             display: flex; }
           body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .horLine, body #contacts .contactsInfo .location .socialMediaIcons .row .horLine {
+            background: #fc000b;
             display: flex;
             height: 1px;
-            width: 0px;
             margin: 0px 20px;
-            background: #fc000b; }
+            width: 0px; }
           body #contacts .contactsInfo .socialMedia .socialMediaIcons .row .verLine, body #contacts .contactsInfo .location .socialMediaIcons .row .verLine {
-            display: flex;
-            width: 1px;
-            height: 0px;
             background: #fc000b;
-            margin: 25px; }
+            display: flex;
+            height: 0px;
+            margin: 25px;
+            width: 1px; }
+      body #contacts .contactsInfo .socialMedia {
+        justify-content: end; }
       body #contacts .contactsInfo .location {
-        padding-left: 100px; }
+        box-sizing: content-box; }
         body #contacts .contactsInfo .location .socialMediaIcons .row {
           width: auto; }
           body #contacts .contactsInfo .location .socialMediaIcons .row p {
             opacity: 0; }
       body #contacts .contactsInfo .location span {
+        margin-left: 60%;
         margin-right: 50px; }
       body #contacts .contactsInfo .otherInfo {
-        box-sizing: border-box;
-        padding-right: 150px;
         width: 50%; }
 
 @keyframes webDev {
@@ -316,3 +314,31 @@ body {
   100% {
     opacity: 1;
     transform: scale(1); } }
+
+@media screen and (max-width: 1200px) {
+  span {
+    font-size: 14px; }
+  #introSVG {
+    width: 70%; }
+  .navWrapper {
+    padding-left: 20px !important;
+    bottom: 20px !important; }
+  .skillsWrapper {
+    width: 90% !important; }
+  .worksWrapper {
+    width: 90% !important; }
+  .contactsInfo {
+    align-items: baseline !important; }
+  .location {
+    flex-direction: column !important;
+    margin-left: 150px; }
+    .location span {
+      margin: 0 !important; }
+  .socialMedia {
+    flex-direction: column-reverse !important; }
+    .socialMedia span {
+      margin-bottom: 30px; } }
+
+@media screen and (min-width: 1200px) {
+  #about {
+    padding-left: 150px !important; } }
