@@ -45,19 +45,18 @@ a {
 body {
     background: $backgroundColor;
     margin: 0;
-    background-image: url(../images/bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
     section {
         max-width: 1440px;
-        height: 100vh;
         margin: auto;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
     }
     #intro {
         @include flex-center;
+        min-height: 100vh;
         flex-direction: column;
         #logoStartElement {
             transform-origin: center;
@@ -380,6 +379,9 @@ body {
 }
 
 @media screen and (max-width: 1200px)  {
+    nav {
+        display: none!important;
+    }
     span {
         font-size: 14px;
     }
@@ -414,7 +416,52 @@ body {
     }
 }
 @media screen and (min-width: 1200px)  {
+    body {
+        background-image: url(../images/bg.svg);
+    }
     #about {
         padding-left: 150px!important;
+    }
+}
+@media screen and (min-width: 780px)  {
+    section {
+        height: 100vh!important;
+    }
+}
+@media screen and (max-width: 780px)  {
+    section:not(:nth-child(-n+2)) {
+        margin-top: 150px!important;
+    }
+    #introSVG {
+        width: 90%;
+    }
+    #about {
+        padding-left: 20px!important;
+        .aboutHeader {
+            width: 100%!important;
+        }
+        .redLines {
+            display: none!important;
+        }
+        .aboutTxt {
+            width: 90%!important;
+        }
+    }
+    .skillName {
+        font-size: 20px!important;
+    }
+    .workItem {
+        width: 100%!important;
+        margin-bottom: 20px!important;
+    }
+    .contactsInfo {
+        flex-direction: column!important;
+    }
+    .socialMedia {
+        width: 100%!important;
+        margin-bottom: 100px;
+    }
+    #contacts {
+        margin-bottom: 100px;
     }
 }

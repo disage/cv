@@ -34,13 +34,11 @@ a {
 body {
   background: #120423;
   margin: 0;
-  background-image: url(../images/bg.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top; }
   body section {
     max-width: 1440px;
-    height: 100vh;
     margin: auto;
     -webkit-touch-callout: none;
     -webkit-user-select: none; }
@@ -48,6 +46,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     flex-direction: column; }
     body #intro #logoStartElement {
       transform-origin: center;
@@ -316,6 +315,8 @@ body {
     transform: scale(1); } }
 
 @media screen and (max-width: 1200px) {
+  nav {
+    display: none !important; }
   span {
     font-size: 14px; }
   #introSVG {
@@ -340,5 +341,37 @@ body {
       margin-bottom: 30px; } }
 
 @media screen and (min-width: 1200px) {
+  body {
+    background-image: url(../images/bg.svg); }
   #about {
     padding-left: 150px !important; } }
+
+@media screen and (min-width: 780px) {
+  section {
+    height: 100vh !important; } }
+
+@media screen and (max-width: 780px) {
+  section:not(:nth-child(-n+2)) {
+    margin-top: 150px !important; }
+  #introSVG {
+    width: 90%; }
+  #about {
+    padding-left: 20px !important; }
+    #about .aboutHeader {
+      width: 100% !important; }
+    #about .redLines {
+      display: none !important; }
+    #about .aboutTxt {
+      width: 90% !important; }
+  .skillName {
+    font-size: 20px !important; }
+  .workItem {
+    width: 100% !important;
+    margin-bottom: 20px !important; }
+  .contactsInfo {
+    flex-direction: column !important; }
+  .socialMedia {
+    width: 100% !important;
+    margin-bottom: 100px; }
+  #contacts {
+    margin-bottom: 100px; } }
