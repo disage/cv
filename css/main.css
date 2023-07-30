@@ -351,8 +351,6 @@ body {
     height: 100vh !important; } }
 
 @media screen and (max-width: 780px) {
-  section:not(:first-child):not(:nth-child(2)) {
-    margin-top: 150px !important; }
   #introSVG {
     width: 90%; }
   #about {
@@ -363,6 +361,8 @@ body {
       width: 40% !important; }
     #about .aboutTxt {
       width: 90% !important; }
+  #skills, #works {
+    margin-top: 150px !important; }
   .skillName {
     font-size: 20px !important; }
   .workItem {
@@ -374,4 +374,5 @@ body {
     width: 100% !important;
     margin-bottom: 100px; }
   #contacts {
+    margin-top: 150px !important;
     margin-bottom: 100px; } }
