@@ -351,7 +351,7 @@ body {
     height: 100vh !important; } }
 
 @media screen and (max-width: 780px) {
-  section:not(:nth-child(-n+2)) {
+  section:not(:first-child):not(:nth-child(2)) {
     margin-top: 150px !important; }
   #introSVG {
     width: 90%; }
@@ -360,7 +360,7 @@ body {
     #about .aboutHeader {
       width: 100% !important; }
     #about .redLines {
-      display: none !important; }
+      width: 40% !important; }
     #about .aboutTxt {
       width: 90% !important; }
   .skillName {

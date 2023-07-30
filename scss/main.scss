@@ -429,7 +429,7 @@ body {
     }
 }
 @media screen and (max-width: 780px)  {
-    section:not(:nth-child(-n+2)) {
+    section:not(:first-child):not(:nth-child(2)) {
         margin-top: 150px!important;
     }
     #introSVG {
@@ -441,7 +441,7 @@ body {
             width: 100%!important;
         }
         .redLines {
-            display: none!important;
+            width: 40%!important;
         }
         .aboutTxt {
             width: 90%!important;
