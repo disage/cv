@@ -39,6 +39,9 @@ ul {
 }
 a {
     color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -231,16 +234,25 @@ body {
                 &:nth-child(1) {
                     margin-bottom: 50px;
                 }
+                .seeMore {
+                    display: none;
+                }
                 &:hover {
                     .workImage {
                         background: rgba(0, 0, 0, 0.0);
                         transition: 0.6s ;
-                        p {
+                        .purplePill {
                             transform: translateY(75px);
                             transition: 0.7s;
-                            font-size: 18px;
                             background: $realPurple;
-                            padding: 10px 20px;
+                            .projectName {
+                                display: none
+                            }
+                            .seeMore {
+                                display: block;
+                                padding: 10px 20px;
+                                font-size: 18px;
+                            }
                         }
                     }
                 }

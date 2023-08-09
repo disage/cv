@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="
+    https://cdn.jsdelivr.net/npm/swiper@10.1.0/swiper-bundle.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./css/projectPage.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <title>Project - Cooking Companion</title>
+</head>
+
+<body>
+    <section id="projectPage">
+        <a class="goBackBtn" href="index.html#works">Go Back</a>
+        <div class="leftColumn">
+            <h2>Cooking Companion</h2>
+            <div class="divider"></div>
+            <p><b>Date of creartion:</b> 06.2023</p>
+            <p><b>Stack:</b> React JS</p>
+            <p><b>Additional Technologies:</b> Firebase, Chat GPT</p>
+            <h2 class="descriptionTitle">Description</h2>
+            <div class="divider"></div>
+            <span>Сooking Сompanion is React application which designed to assist users in creating a meal using
+                ingredients they have on hand. Upon launching the application, users are greeted with a user-friendly
+                interface where they can enter the ingredients they want to include in their dish. Application use Chat
+                GPT API to generate recipes and cooking instructions. Google Firebase is used to store user
+                products.</span>
+        </div>
+        <div class="rightColumn">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img class="projectScreenshot" src="images/projectCC.png"
+                            alt="web site screenshot">
+                    </div>
+                    <div class="swiper-slide"> <img class="projectScreenshot" src="images/projectCC.png"
+                            alt="web site screenshot">
+                    </div>
+                    <div class="swiper-slide"><img class="projectScreenshot" src="images/projectCC.png"
+                            alt="web site screenshot"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <p><b>Site link:</b> <a href="https://cooking-companion-2023.web.app/">cooking-companion-2023.web.app</a>
+            </p>
+            <p><b>GitHub:</b> <a
+                    href="https://github.com/disage/cooking-companion">github.com/disage/cooking-companion</a>
+            </p>
+        </div>
+    </section>
+    <script src="
+    https://cdn.jsdelivr.net/npm/swiper@10.1.0/swiper-bundle.min.js
+    "></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+</body>
+
+</html>

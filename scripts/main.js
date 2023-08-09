@@ -348,5 +348,9 @@ animOnScroll();
 changeNavItemOnScroll();
 window.scrollBy(0, -10);
 
-
-
+function scrollToDown() {
+  window.scrollBy(0, 10);
+  animOnScroll();
+}
+window.addEventListener('hashchange', scrollToDown);
+document.addEventListener('DOMContentLoaded', scrollToDown);

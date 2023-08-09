@@ -1,0 +1,91 @@
+$backgroundColor: #120423;
+$coolRed: #fc000b;
+
+a {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+
+body {
+    background-color: $backgroundColor;
+    section {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 1440px;
+        padding-top: 100px;
+        .goBackBtn {
+            position: absolute;
+            top: 50px;
+        }
+        .leftColumn, .rightColumn {
+            width: 47%;
+            p, span {
+                color: #ffffff;
+                font-family: "Montserrat", sans-serif;
+                font-size: 24px;
+                font-weight: 100;
+                word-wrap: break-word;
+            }
+            b {
+                font-weight: 500;
+            }
+            .descriptionTitle {
+                margin-top: 50px;
+            }
+            .divider {
+                background-color: $coolRed;
+                display: block;
+                height: 2px;
+                margin: 20px 0;
+            }
+            .projectScreenshot {
+                width: 100%;
+            }
+            .swiper-button-next, .swiper-button-prev {
+                color: $coolRed!important;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: $coolRed!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    section {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+@media screen and (min-width: 780px)  {
+    section {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 1200px)  {
+    section {
+        flex-wrap: wrap;
+        .leftColumn, .rightColumn {
+            width: 100%!important;
+        }
+        .rightColumn {
+            padding: 100px 0;
+        }
+    }
+}
+@media screen and (max-width: 1540px)  {
+    section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

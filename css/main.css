@@ -29,6 +29,9 @@ ul {
 
 a {
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
   text-decoration: none; }
 
 body {
@@ -200,15 +203,21 @@ body {
         padding-top: 10px; }
         body #works .worksWrapper .workItem:nth-child(1) {
           margin-bottom: 50px; }
+        body #works .worksWrapper .workItem .seeMore {
+          display: none; }
         body #works .worksWrapper .workItem:hover .workImage {
           background: rgba(0, 0, 0, 0);
           transition: 0.6s; }
-          body #works .worksWrapper .workItem:hover .workImage p {
+          body #works .worksWrapper .workItem:hover .workImage .purplePill {
             transform: translateY(75px);
             transition: 0.7s;
-            font-size: 18px;
-            background: #52006f;
-            padding: 10px 20px; }
+            background: #52006f; }
+            body #works .worksWrapper .workItem:hover .workImage .purplePill .projectName {
+              display: none; }
+            body #works .worksWrapper .workItem:hover .workImage .purplePill .seeMore {
+              display: block;
+              padding: 10px 20px;
+              font-size: 18px; }
         body #works .worksWrapper .workItem .workImage {
           display: flex;
           justify-content: center;

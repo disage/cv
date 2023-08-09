@@ -1,0 +1,68 @@
+a {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif; }
+
+h2 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0; }
+
+body {
+  background-color: #120423; }
+  body section {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1440px;
+    padding-top: 100px; }
+    body section .goBackBtn {
+      position: absolute;
+      top: 50px; }
+    body section .leftColumn, body section .rightColumn {
+      width: 47%; }
+      body section .leftColumn p, body section .leftColumn span, body section .rightColumn p, body section .rightColumn span {
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
+        font-weight: 100;
+        word-wrap: break-word; }
+      body section .leftColumn b, body section .rightColumn b {
+        font-weight: 500; }
+      body section .leftColumn .descriptionTitle, body section .rightColumn .descriptionTitle {
+        margin-top: 50px; }
+      body section .leftColumn .divider, body section .rightColumn .divider {
+        background-color: #fc000b;
+        display: block;
+        height: 2px;
+        margin: 20px 0; }
+      body section .leftColumn .projectScreenshot, body section .rightColumn .projectScreenshot {
+        width: 100%; }
+      body section .leftColumn .swiper-button-next, body section .leftColumn .swiper-button-prev, body section .rightColumn .swiper-button-next, body section .rightColumn .swiper-button-prev {
+        color: #fc000b !important; }
+      body section .leftColumn .swiper-pagination-bullet-active, body section .rightColumn .swiper-pagination-bullet-active {
+        background-color: #fc000b !important; }
+
+@media screen and (max-width: 600px) {
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important; } }
+
+@media screen and (min-width: 780px) {
+  section {
+    height: 100vh; } }
+
+@media screen and (max-width: 1200px) {
+  section {
+    flex-wrap: wrap; }
+    section .leftColumn, section .rightColumn {
+      width: 100% !important; }
+    section .rightColumn {
+      padding: 100px 0; } }
+
+@media screen and (max-width: 1540px) {
+  section {
+    padding-left: 50px;
+    padding-right: 50px; } }
