@@ -84,7 +84,6 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                padding-left: 100px;
                 position: fixed;
                 bottom: 50px;
                 align-items: flex-start;
@@ -425,6 +424,11 @@ body {
         span {
             margin-bottom: 30px;
         }
+    }
+}
+@media screen and (max-width: 1500px)  {
+    .navWrapper {
+        padding-left: 100px
     }
 }
 @media screen and (min-width: 1200px)  {
