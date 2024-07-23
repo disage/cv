@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="
+    https://cdn.jsdelivr.net/npm/swiper@10.1.0/swiper-bundle.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./css/projectPage.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <title>Project - Reack Pizza</title>
+</head>
+
+<body>
+    <section id="projectPage">
+        <a class="goBackBtn" href="index.html#works">Go Back</a>
+        <div class="leftColumn">
+            <h2>Reack Pizza</h2>
+            <div class="divider"></div>
+            <p><b>Date of creartion:</b> 09.2020</p>
+            <p><b>Stack:</b> React JS, Redux, Redux thunk, SCSS</p>
+            <h2 class="descriptionTitle">Description</h2>
+            <div class="divider"></div>
+            <span>This is a pet project, employing React and Redux technologies to create an
+                online pizza shop. The application enables users to browse through a variety of pizza options, select
+                sizes, toppings, and
+                add pizza to cart</span>
+        </div>
+        <div class="rightColumn">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img class="projectScreenshot" src="images/projectReactPizza.png"
+                            alt="web site screenshot">
+                    </div>
+                    <div class="swiper-slide"> <img class="projectScreenshot" src="images/projectReactPizza.png"
+                            alt="web site screenshot">
+                    </div>
+                    <div class="swiper-slide"><img class="projectScreenshot" src="images/projectReactPizza.png"
+                            alt="web site screenshot"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <p><b>GitHub:</b> <a href="https://github.com/disage/react-pizza">github.com/disage/react-pizza</a>
+            </p>
+        </div>
+    </section>
+    <script src="
+    https://cdn.jsdelivr.net/npm/swiper@10.1.0/swiper-bundle.min.js
+    "></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+</body>
+
+</html>
